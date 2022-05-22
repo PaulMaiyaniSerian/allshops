@@ -1,0 +1,53 @@
+//////documentation//////////
+development_port = 8000
+
+.....registering a user............
+{{url}}/accounts/api/register_user/
+payload = {
+    "email": "paulserian12@gmail.com",
+    "password":"12345678",
+    "password2": "12345678"
+}
+
+description === creates a user and returns the email with status 201
+
+------login a user..............
+{{url}}/accounts/api/token/
+payload = {
+    "email":"paul@gmail.com",
+    "password": "paulee"
+}
+
+returns access and refresh token
+
+else if details are invalid returns 
+401 unaithorized with 
+{
+    detail:"errror message"
+}
+
+-------------update seller profile---- set is seller to true and completed
+{{url}}/profile/...method post
+payload = {
+    "username": "newuser23",
+    "fname": "paul",
+    "lname": "serian",
+    "profile_picture": null,
+    "business_document_image": null,
+    "business_super_name": "paulselectronics",
+    "subscription": 1,
+    "is_seller": true
+}
+
+get profile data
+{{url}}/profile/
+output = {
+    "user": 1,
+    "username": "paulserian",
+    "fname": "paul",
+    "lname": "serian",
+    "profile_picture": null,
+    "business_document_image": null,
+    "business_super_name": "paulselectronics"
+    "is_seller": true
+}

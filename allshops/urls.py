@@ -41,7 +41,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     # add path for account related features
-    path('accounts/api/', include("accounts.urls")),
+    path('service/accounts/api/', include("accounts.urls")),
     path('admin/', admin.site.urls),
 
     # documentation urls

@@ -1,8 +1,15 @@
 from rest_framework import serializers
-from .models import User
+from .models import User, Profile
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
 
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Profile
+        fields = ["user","username", "fname","lname" , "profile_picture", "business_document_image", "business_super_name", "is_seller"]
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -56,5 +63,3 @@ class RegisterSerializer(serializers.ModelSerializer):
     #     ret.pop("is_seller")
     #     return ret
 
-class SellerSerializer(serializers.Serializer):
-    is_seller = serializers.BooleanField(required=True)
