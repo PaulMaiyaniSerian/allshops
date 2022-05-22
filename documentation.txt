@@ -27,3 +27,27 @@ else if details are invalid returns
 }
 
 -------------update seller profile---- set is seller to true and completed
+{{url}}/profile/...method post
+payload = {
+    "username": "newuser23",
+    "fname": "paul",
+    "lname": "serian",
+    "profile_picture": null,
+    "business_document_image": null,
+    "business_super_name": "paulselectronics",
+    "subscription": 1,
+    "is_seller": true
+}
+
+get profile data
+{{url}}/profile/
+output = {
+    "user": 1,
+    "username": "paulserian",
+    "fname": "paul",
+    "lname": "serian",
+    "profile_picture": null,
+    "business_document_image": null,
+    "business_super_name": "paulselectronics"
+    "is_seller": true
+}

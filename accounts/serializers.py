@@ -9,9 +9,8 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Profile
-        fields = "__all__"
+        fields = ["user","username", "fname","lname" , "profile_picture", "business_document_image", "business_super_name", "is_seller"]
 
-        
 
 class UserSerializer(serializers.ModelSerializer):
 

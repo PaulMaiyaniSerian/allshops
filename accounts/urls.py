@@ -15,7 +15,7 @@ urlpatterns = [
     path("register_user/", views.RegisterView.as_view(), name="register_view"),
 
     # update_profile_view
-    path('profile/seller/update/', views.update_seller_profile, name="update_seller_profile"),
+    path('profile/', views.ProfileView.as_view(), name="accounts_profile"),
 
     # jwt views
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
