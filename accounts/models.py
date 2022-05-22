@@ -93,6 +93,7 @@ class Profile(models.Model):
 
     is_seller = models.BooleanField(default=False)
 
+
     def __str__(self):
         return f"{self.user.email}'s profile"
 
